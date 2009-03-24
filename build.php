@@ -26,9 +26,10 @@ function prune() {
   system("rm -rf tmp/gallery3/core/tests");
 }
 
-function package($tag) {
+function package($package_name) {
   chdir("tmp");
-  system("zip -r ../dist/{$tag}.zip gallery3");
+
+  system("zip -r ../dist/{$package_name}.zip gallery3");
 }
 
 
@@ -38,9 +39,15 @@ if (empty($tag)) {
   exit(1);
 }
 
+// Convert RELEASE_3_0_ALPHA_3 to gallery-3.0-alpha-2.zip
+preg_match("/RELEASE_(\d+)_(\d+)_(.*)/", $tag, $matches);
+list ($major, $minor, $build) = array($matches[1], $matches[2], $matches[3]);
+$build = strtolower(strtr($build, "_", "-"));
+$package_name = "gallery-$major.$minor-$build";
+
 clean();
 prepare();
 export($tag);
 prune();
-package($tag);
+package($package_name);
 ?>
