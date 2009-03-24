@@ -24,6 +24,7 @@ function prune() {
   system("rm -rf tmp/gallery3/modules/unit_test");
   system("rm -rf tmp/gallery3/modules/*/tests");
   system("rm -rf tmp/gallery3/core/tests");
+  system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
 }
 
 function package($package_name) {
