@@ -1,5 +1,7 @@
 Draft Release Checklist
 
+0) Update the gallery3 version string in core_installer.php
+
 1) Tag the release, eg:
    svn copy \
        https://gallery.svn.sourceforge.net/svnroot/gallery/gallery3/trunk \
