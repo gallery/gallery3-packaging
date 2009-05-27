@@ -13,10 +13,15 @@ function prepare() {
 }
 
 function export($tag) {
-  system(
-    "svn export http://gallery.svn.sourceforge.net/svnroot/gallery/gallery3/tags/$tag " .
-    "tmp/gallery3")
-    or die("export failed");
+  $dir = getcwd();
+  system("git clone git://github.com/gallery/gallery3.git tmp/gallery3")
+    or die("git clone failed");
+
+  chdir("tmp/gallery3");
+  // I had to remove the die(...) as on my installation it returns with
+  // a warning and stops.
+  system("git checkout $tag");
+  chdir($dir);
 }
 
 function prune() {
@@ -25,12 +30,14 @@ function prune() {
   system("rm -rf tmp/gallery3/modules/*/tests");
   system("rm -rf tmp/gallery3/core/tests");
   system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
+  system("rm -rf tmp/gallery3/.git");
+  system("find tmp/gallery3 -name .gitignore | xargs rm");
 }
 
-function package($package_name) {
+function package($tag) {
   chdir("tmp");
 
-  system("zip -r ../dist/{$package_name}.zip gallery3");
+  system("zip -r ../dist/gallery-{$tag}.zip gallery3");
 }
 
 
@@ -40,15 +47,9 @@ if (empty($tag)) {
   exit(1);
 }
 
-// Convert RELEASE_3_0_ALPHA_3 to gallery-3.0-alpha-2.zip
-preg_match("/RELEASE_(\d+)_(\d+)_(.*)/", $tag, $matches);
-list ($major, $minor, $build) = array($matches[1], $matches[2], $matches[3]);
-$build = strtolower(strtr($build, "_", "-"));
-$package_name = "gallery-$major.$minor-$build";
-
 clean();
 prepare();
 export($tag);
 prune();
-package($package_name);
+package($tag);
 ?>
