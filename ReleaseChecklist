@@ -3,15 +3,14 @@ Draft Release Checklist
 0) Update the gallery3 version string in core_installer.php
 
 1) Tag the release, eg:
-   svn copy \
-       https://gallery.svn.sourceforge.net/svnroot/gallery/gallery3/trunk \
-       https://gallery.svn.sourceforge.net/svnroot/gallery/gallery3/tags/RELEASE_3_0_ALPHA_4
+   $ git tag 3.0-beta-1
+   $ git push --tags
 
 2) Build the release, eg:
-   php build.php RELEASE_3_0_ALPHA_4
+   php build.php 3.0-beta-1
 
 3) Publish the release to sf.net
-   rsync -avP -e ssh dist/gallery-3.0-alpha-4.zip bharat@frs.sourceforge.net:uploads/
+   rsync -avP -e ssh dist/gallery-3.0-beta-1.zip bharat@frs.sourceforge.net:uploads/
 
 4) <insert docs about updating SF.net FRS stuff here>
 

@@ -1,7 +1,12 @@
 #!/usr/bin/php -f
 <?php
+function my_system($cmd) {
+  print "Cmd> $cmd\n";
+  return system($cmd);
+}
+
 function clean() {
-  system("rm -rf tmp");
+  my_system("rm -rf tmp");
 }
 
 function prepare() {
@@ -14,30 +19,34 @@ function prepare() {
 
 function export($tag) {
   $dir = getcwd();
-  system("git clone git://github.com/gallery/gallery3.git tmp/gallery3")
+  my_system("git clone git://github.com/gallery/gallery3.git tmp/gallery3")
     or die("git clone failed");
 
   chdir("tmp/gallery3");
-  // I had to remove the die(...) as on my installation it returns with
-  // a warning and stops.
-  system("git checkout $tag");
+
+  print "=================================================\n";
+  my_system("git checkout $tag");  // this isn't a branch, so it'll succeed with an error.
+  print "=================================================\n";
+  print " The above command will fail with a message like \n";
+  print " '$tag isn't a local branch'\n";
+  print " that's ok-- you can ignore it\n";
+  print "=================================================\n";
   chdir($dir);
 }
 
 function prune() {
-  system("rm -rf tmp/gallery3/modules/gallery_unit_test");
-  system("rm -rf tmp/gallery3/modules/unit_test");
-  system("rm -rf tmp/gallery3/modules/*/tests");
-  system("rm -rf tmp/gallery3/core/tests");
-  system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
-  system("rm -rf tmp/gallery3/.git");
-  system("find tmp/gallery3 -name .gitignore | xargs rm");
+  my_system("rm -rf tmp/gallery3/modules/gallery_unit_test");
+  my_system("rm -rf tmp/gallery3/modules/unit_test");
+  my_system("rm -rf tmp/gallery3/modules/*/tests");
+  my_system("rm -rf tmp/gallery3/core/tests");
+  my_system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
+  my_system("rm -rf tmp/gallery3/.git");
 }
 
 function package($tag) {
   chdir("tmp");
 
-  system("zip -r ../dist/gallery-{$tag}.zip gallery3");
+  my_system("zip -q --exclude .gitignore -r ../dist/gallery-{$tag}.zip gallery3");
 }
 
 
