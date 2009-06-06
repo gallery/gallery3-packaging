@@ -41,12 +41,14 @@ function prune() {
   my_system("rm -rf tmp/gallery3/core/tests");
   my_system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
   my_system("rm -rf tmp/gallery3/.git");
+  my_system("rm `find tmp/gallery3 -name .gitignore`");
 }
 
 function package($tag) {
+  @unlink("dist/gallery-{$tag}.zip");
   chdir("tmp");
 
-  my_system("zip -q --exclude .gitignore -r ../dist/gallery-{$tag}.zip gallery3");
+  my_system("zip -q -r ../dist/gallery-{$tag}.zip gallery3");
 }
 
 
