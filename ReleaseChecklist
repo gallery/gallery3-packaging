@@ -1,21 +1,22 @@
 Draft Release Checklist
 
-0) Update the gallery3 version string in core_installer.php
+1) Update the gallery3 VERSION constant in modules/gallery/helpers/gallery.php
 
-1) Tag the release, eg:
-   $ git tag 3.0-beta-1
+2) Tag the release, eg:
+   $ git tag 3.0-beta-2
    $ git push --tags
 
-2) Build the release, eg:
-   php build.php 3.0-beta-1
+3) Build the release, eg:
+   php build.php 3.0-beta-2
 
-3) Publish the release to sf.net
-   rsync -avP -e ssh dist/gallery-3.0-beta-1.zip bharat@frs.sourceforge.net:uploads/
+4) Publish the release to sf.net
+   rsync -avP -e ssh dist/gallery-3.0-beta-2.zip bharat@frs.sourceforge.net:uploads/
 
-4) <insert docs about updating SF.net FRS stuff here>
+5) <insert docs about updating SF.net FRS stuff here>
 
-5) Update sf.net, freshmeat.net stories
+6) Click "publish" on the GMC story
 
-6) Publish gmc story
+7) Update sf.net, freshmeat.net stories
+
 
 
