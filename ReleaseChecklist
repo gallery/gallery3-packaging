@@ -1,6 +1,7 @@
 Draft Release Checklist
 
-1) Update the gallery3 VERSION constant in modules/gallery/helpers/gallery.php
+1) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
+1a) Look over gallery3/README and touch up anything version specific
 
 2) Tag the release, eg:
    $ git tag 3.0-rc-1
