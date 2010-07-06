@@ -1,4 +1,6 @@
-Draft Release Checklist
+Release Checklist
+
+0) Make sure all unit tests pass
 
 1) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
 
