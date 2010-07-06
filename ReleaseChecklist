@@ -1,27 +1,30 @@
 Draft Release Checklist
 
 1) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
-1a) Look over gallery3/README and touch up anything version specific
 
-2) Tag the release, eg:
-   $ git tag 3.0-rc-1
+2) Look over gallery3/README and touch up anything version specific
+
+3) Tag the release, eg:
+   $ git tag 3.0-rc-2
    $ git push --tags
 
-3) Build the release, eg:
-   php build.php 3.0-rc-1
+4) Build the release, eg:
+   php build.php 3.0-rc-2
 
-4) Publish the release to sf.net
-   rsync -avP -e ssh dist/gallery-3.0-rc-1.zip bharat@frs.sourceforge.net:uploads/
+5) Publish the release to sf.net
+   rsync -avP -e ssh dist/gallery-3.0-rc-2.zip bharat@frs.sourceforge.net:uploads/
 
-5) <insert docs about updating SF.net FRS stuff here>
+6) <insert docs about updating SF.net FRS stuff here>
 
-6) Create a forum topic for the release
+7) Create a forum topic for the release
 
-7) One final pass over the GMC news story, make sure the download link is correct.
+8) One final pass over the GMC news story, make sure the download link is correct.
 
-8) Click "publish" on the GMC story
+9) Click "publish" on the GMC story
 
-9) Update sf.net, freshmeat.net stories
+10) Update the release date on the Codex
 
-10) Close the old milestone
+11) Update sf.net, freshmeat.net stories
+
+12) Close the old milestone
 
