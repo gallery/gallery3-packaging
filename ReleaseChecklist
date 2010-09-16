@@ -1,5 +1,7 @@
 Release Checklist
 
+-1) Notify gallery-redistributors list of upcoming release
+
 0) Make sure all unit tests pass
 
 1) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
@@ -26,7 +28,9 @@ Release Checklist
 
 10) Update the release date on the Codex
 
-11) Update sf.net, freshmeat.net stories
+11) Update sf.net, freshmeat.net, opensourcecms.com stories
 
-12) Close the old milestone
+12) E-mail gallery-announce and gallery-redistributors announcing the releas, linking to the GMC story and download URL
+
+13) Close the old milestone
 
