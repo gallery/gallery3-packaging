@@ -15,22 +15,19 @@ Release Checklist
 6) Build the release, eg:
    php build.php 3.0-rc-2
 
-7) Publish the release to sf.net
-   rsync -avP -e ssh dist/gallery-3.0-rc-2.zip bharat@frs.sourceforge.net:uploads/
+7) <insert docs about updating SF.net FRS stuff here>
 
-8) <insert docs about updating SF.net FRS stuff here>
+8) Create a forum topic for the release
 
-9) Create a forum topic for the release
+9) One final pass over the GMC news story, make sure the download link is correct.
 
-10) One final pass over the GMC news story, make sure the download link is correct.
+10) Click "publish" on the GMC story
 
-11) Click "publish" on the GMC story
+11) Update the release date on the Codex
 
-12) Update the release date on the Codex
+12) Update sf.net, freshmeat.net, opensourcecms.com stories
 
-13) Update sf.net, freshmeat.net, opensourcecms.com stories
+13) E-mail gallery-announce and gallery-redistributors announcing the release, linking to the GMC story and download URL
 
-14) E-mail gallery-announce and gallery-redistributors announcing the releas, linking to the GMC story and download URL
-
-15) Close the old milestone
+14) Close the old milestone
 
