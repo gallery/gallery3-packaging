@@ -1,36 +1,36 @@
 Release Checklist
 
--1) Notify gallery-redistributors list of upcoming release
+1) Notify gallery-redistributors list of upcoming release
 
-0) Make sure all unit tests pass
+2) Make sure all unit tests pass
 
-1) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
+3) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
 
-2) Look over gallery3/README and touch up anything version specific
+4) Look over gallery3/README and touch up anything version specific
 
-3) Tag the release, eg:
+5) Tag the release, eg:
    $ git tag 3.0-rc-2
    $ git push --tags
 
-4) Build the release, eg:
+6) Build the release, eg:
    php build.php 3.0-rc-2
 
-5) Publish the release to sf.net
+7) Publish the release to sf.net
    rsync -avP -e ssh dist/gallery-3.0-rc-2.zip bharat@frs.sourceforge.net:uploads/
 
-6) <insert docs about updating SF.net FRS stuff here>
+8) <insert docs about updating SF.net FRS stuff here>
 
-7) Create a forum topic for the release
+9) Create a forum topic for the release
 
-8) One final pass over the GMC news story, make sure the download link is correct.
+10) One final pass over the GMC news story, make sure the download link is correct.
 
-9) Click "publish" on the GMC story
+11) Click "publish" on the GMC story
 
-10) Update the release date on the Codex
+12) Update the release date on the Codex
 
-11) Update sf.net, freshmeat.net, opensourcecms.com stories
+13) Update sf.net, freshmeat.net, opensourcecms.com stories
 
-12) E-mail gallery-announce and gallery-redistributors announcing the releas, linking to the GMC story and download URL
+14) E-mail gallery-announce and gallery-redistributors announcing the releas, linking to the GMC story and download URL
 
-13) Close the old milestone
+15) Close the old milestone
 
