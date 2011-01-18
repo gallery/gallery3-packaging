@@ -41,6 +41,8 @@ function prune() {
   my_system("rm -rf tmp/gallery3/core/tests");
   my_system("rm -rf tmp/gallery3/core/controllers/scaffold.php");
   my_system("rm -rf tmp/gallery3/.git");
+  my_system("rm -rf tmp/gallery3/.build_number");
+  my_system("rm -rf tmp/gallery3/.gitattributes");
   my_system("rm `find tmp/gallery3 -name .gitignore`");
 }
 
