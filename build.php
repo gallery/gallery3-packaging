@@ -46,6 +46,31 @@ function prune() {
   my_system("rm `find tmp/gallery3 -name .gitignore`");
 }
 
+function fix_release_channel() {
+  $gallery_helper = "tmp/gallery3/modules/gallery/helpers/gallery.php";
+  $data = file_get_contents($gallery_helper);
+  $data = preg_replace(
+    '/const RELEASE_CHANNEL = "git";/',
+    'const RELEASE_CHANNEL = "release";',
+    $data, 1);
+  file_put_contents($gallery_helper, $data);
+  if (($result = `php -l "$gallery_helper"`) !=
+      "No syntax errors detected in $gallery_helper\n") {
+    print "Error changing release channel:\n$result";
+    exit(1);
+  }
+
+  $script = join(";", array("define(SYSPATH, 1)",
+                            "include \"$gallery_helper\"",
+                            "print gallery_Core::RELEASE_CHANNEL"));
+  $channel = `php -r '$script;'`;
+  if ($channel != "release") {
+    print "Error fixing release channel\n";
+    print $channel;
+    exit(1);
+  }
+}
+
 function package($tag) {
   @unlink("dist/gallery-{$tag}.zip");
   chdir("tmp");
@@ -64,5 +89,6 @@ clean();
 prepare();
 export($tag);
 prune();
+fix_release_channel();
 package($tag);
 ?>
