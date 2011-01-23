@@ -4,24 +4,25 @@ Release Checklist
 
 2) Make sure all unit tests pass
 
-3) Update the gallery3 VERSION constant in galler3/modules/gallery/helpers/gallery.php
+3) Update the gallery3 VERSION constant in gallery3/modules/gallery/helpers/gallery.php
+   if necessary
 
 4) Look over gallery3/README and touch up anything version specific
 
 5) Tag the release, eg:
-   $ git tag 3.0-rc-2
+   $ git tag 3.0.1
    $ git push --tags
 
 6) Build the release, eg:
-   php build.php 3.0-rc-2
+   php build.php 3.0.1
 
 7) <insert docs about updating SF.net FRS stuff here>
 
-8) Create a forum topic for the release
+8) Create a forum topic for the release, leave it unpublished.
 
 9) One final pass over the GMC news story, make sure the download link is correct.
 
-10) Click "publish" on the GMC story
+10) Click "publish" on the GMC story and the forum topic
 
 11) Update gallery.menalto.com/downloadblock
 
@@ -29,8 +30,11 @@ Release Checklist
 
 13) Update sf.net, freshmeat.net, opensourcecms.com stories
 
-14) E-mail gallery-announce and gallery-redistributors announcing the release, linking to the GMC story and download URL
+14) E-mail gallery-announce and gallery-redistributors announcing the
+    release, linking to the GMC story and download URL
 
-15) Close the old milestone, create a milestone for the next release, create a version for the milestone just closed and
-    make it the default, make the new milestone the default.
+15) Close the old milestone, create a milestone for the next release,
+    create a version for the milestone just closed and make it the
+    default, make the new milestone the default.
 
+16) Update the topic on IRC
