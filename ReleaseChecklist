@@ -16,7 +16,7 @@ Release Checklist
 6) Build the release, eg:
    php build.php 3.0.1
 
-7) <insert docs about updating SF.net FRS stuff here>
+7) Upload the file to Github at https://github.com/gallery/gallery3/downloads and note the download link for the package, i.e. https://github.com/downloads/gallery/gallery3/gallery-3.0.1.zip
 
 8) Create a forum topic for the release, leave it unpublished.
 
