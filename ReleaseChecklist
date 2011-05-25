@@ -1,20 +1,36 @@
 Release Checklist
+-----------------
+
+All the instructions below refer to the version of the code in the
+appropriate release branch.  The expectation is that the master branch
+is where main development happens and that we'll have a branch for
+each individual major release version:
+
+ >--+----------------+--------------------------> master
+    |                \----*----------> 3.1.x
+    |                     3.1
+    \----*----------*------------*-------> 3.0.x
+         3.0        3.0.1        3.0.2
+
+The git based instructions below all refer to operations in the
+RELEASE BRANCH.
 
 1) Notify gallery-redistributors list of upcoming release
 
 2) Make sure all unit tests pass
 
 3) Update the gallery3 VERSION constant in gallery3/modules/gallery/helpers/gallery.php
-   if necessary
+   if necessary.  Typically, this version should be updated long before release so
+   that users can track which version they're using.
 
 4) Look over gallery3/README and touch up anything version specific
 
 5) Tag the release, eg:
-   $ git tag 3.0.1
+   $ git tag 3.0.2
    $ git push --tags
 
 6) Build the release, eg:
-   php build.php 3.0.1
+   php build.php 3.0.2
 
 7) <insert docs about updating SF.net FRS stuff here>
 
