@@ -44,13 +44,15 @@ RELEASE BRANCH.
 
 12) Update the release date on the Codex
 
-13) Update sf.net, freshmeat.net, opensourcecms.com stories
+13) Update the release version on http://gallery.menalto.com/admin/gmc_versioncheck
 
-14) E-mail gallery-announce and gallery-redistributors announcing the
+14) Update sf.net, freshmeat.net, opensourcecms.com stories
+
+15) E-mail gallery-announce and gallery-redistributors announcing the
     release, linking to the GMC story and download URL
 
-15) Close the old milestone, create a milestone for the next release,
+16) Close the old milestone, create a milestone for the next release,
     create a version for the milestone just closed and make it the
     default, make the new milestone the default.
 
-16) Update the topic on IRC
+17) Update the topic on IRC
