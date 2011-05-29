@@ -44,7 +44,8 @@ RELEASE BRANCH.
 
 12) Update the release date on the Codex
 
-13) Update the release version on http://gallery.menalto.com/admin/gmc_versioncheck
+13) Update the release_version field on http://gallery.menalto.com/admin/gmc_versioncheck --
+    all the rest should be fine.  The branch entries are updated automatically.
 
 14) Update sf.net, freshmeat.net, opensourcecms.com stories
 
