@@ -40,11 +40,12 @@ RELEASE BRANCH.
 
 10) Click "publish" on the GMC story and the forum topic
 
-11) Update gallery.menalto.com/downloadblock
+11) Update http://galleryproject.org/downloadblock
 
-12) Update the release date on the Codex
+12) Update the release date on the Codex on http://codex.galleryproject.org/Downloads and 
+    http://codex.galleryproject.org/Main_Page
 
-13) Update the release_version field on http://gallery.menalto.com/admin/gmc_versioncheck --
+13) Update the release_version field on http://galleryproject.org/admin/gmc_versioncheck --
     all the rest should be fine.  The branch entries are updated automatically.
 
 14) Update sf.net, freshmeat.net, opensourcecms.com stories
