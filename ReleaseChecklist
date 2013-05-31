@@ -17,7 +17,8 @@ RELEASE BRANCH.
 
 1) Notify gallery-redistributors list of upcoming release
 
-2) Make sure all unit tests pass
+2) Make sure all unit tests pass.  You can check Travis:
+   https://travis-ci.org/gallery/gallery3/branches
 
 3) Update the gallery3 VERSION constant in gallery3/modules/gallery/helpers/gallery.php
    if necessary.  Typically, this version should be updated long before release so
@@ -42,19 +43,20 @@ RELEASE BRANCH.
 
 11) Update http://galleryproject.org/admin/build/block/configure/block/1
 
-12) Update the release date on the Codex on http://codex.galleryproject.org/Downloads and 
+12) Update the release date on the Codex on http://codex.galleryproject.org/Downloads and
     http://codex.galleryproject.org/Main_Page
 
-13) Update the release_version field on http://galleryproject.org/admin/gmc_versioncheck --
+13) Update the 3 release_xxx fields on http://galleryproject.org/admin/gmc_versioncheck --
     all the rest should be fine.  The branch entries are updated automatically.
 
-14) Update sf.net, freshmeat.net, opensourcecms.com stories
-
-15) E-mail gallery-announce and gallery-redistributors announcing the
-    release, linking to the GMC story and download URL
-
-16) Close the old milestone, create a milestone for the next release,
+14) Close the old milestone, create a milestone for the next release,
     create a version for the milestone just closed and make it the
     default, make the new milestone the default.
 
-17) Update the topic on IRC
+15) Update the topic on IRC
+
+16) Update sf.net, freshmeat.net, opensourcecms.com stories
+
+17) E-mail gallery-announce and gallery-redistributors announcing the
+    release, linking to the GMC story and download URL
+
