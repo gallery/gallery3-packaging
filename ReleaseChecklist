@@ -55,7 +55,12 @@ RELEASE BRANCH.
 
 15) Update the topic on IRC
 
-16) Update sf.net, freshmeat.net, opensourcecms.com stories
+16) Update sf.net, freecode.net, opensourcecms.com stories with the first paragraph of the
+    news announcement from galleryproject.org and URLs to the news story and the file.
+    
+    * https://sourceforge.net/news/submit.php?group_id=7130
+    * https://freecode.com/projects/the_gallery/releases/new
+    * http://members.opensourcecms.com/edit/
 
 17) E-mail gallery-announce and gallery-redistributors announcing the
     release, linking to the GMC story and download URL
